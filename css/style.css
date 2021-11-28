@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  --dark-color: hsl(240, 38%, 20%); /*Dark Blue*/
+  --light-color: hsl(240, 18%, 77%); /*Grayish Blue*/
+  --lightest-color: hsl(0, 0%, 100%); /*White*/
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  overflow: visible;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+}
+span {
+  color: var(--light-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+h5 {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+/*CONTAINER*/
+.container {
+  display: flex;
+
+}
+/*CARD*/
+.card {
+}
+/*CARD TESTIMONIAL*/
+.card__testimonial {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 635px;
+  height: 354px;
+  top: 224px;
+  left: 165px;
+}
+.card__testimonial .quotes {
+  width: 120px;
+  height: 100px;
+  z-index: 0;
+  position: absolute;
+  top: -35px;
+  left: 95px;
+}
+.card__testimonial-text {
+  color: var(--dark-color);
+  font-weight: 300;
+  line-height: 1.375;
+  width: 635px;
+  height: 220px;
+  top: 2px;
+
+  z-index: 5;
+}
+
+.card__testimonial-author {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  margin-top: 32px;
+  z-index: 5;
+}
+/*CARD IMG*/
+.card__img-bg {
+  position: absolute;
+  top: 52px;
+  right: 72px;
+  z-index: 0;
+}
+.card__img-author {
+  position: absolute;
+  height: 540px;
+  width: 540px;
+  top: 113px;
+  right: 164px;
+  z-index: 4;
+}
+.card__img-buttons {
+  position: absolute;
+  border-radius: 28px;
+  background: var(--lightest-color);
+  padding: 20px;
+  height: 56px;
+  width: 112px;
+  top: 621px;
+  left: 790px;
+  z-index: 6;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+
+/*ATTRIBUTION*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  top: 355px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
