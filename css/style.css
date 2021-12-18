@@ -5,15 +5,12 @@
   --light-color: hsl(240, 18%, 77%); /*Grayish Blue*/
   --lightest-color: hsl(0, 0%, 100%); /*White*/
 }
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  overflow: visible;
-}
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Inter', sans-serif;
   font-size: 32px;
 }
@@ -28,13 +25,40 @@ h5 {
   font-weight: 700;
   font-size: 1.6rem;
 }
-/*CONTAINER*/
-.container {
+li {
+  list-style: none;
+}
+/*CONTAINER/SLIDER*/
+.slider {
   display: flex;
+  width: 1440px;
+  height: 800px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slider__track-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 
+  /* background: turquoise; */
+}
+.slider__track {
+  position: relative;
+  padding: 0%;
+  margin: 0;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
 }
 /*CARD*/
-.card {
+.slider__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 /*CARD TESTIMONIAL*/
 .card__testimonial {
@@ -61,7 +85,6 @@ h5 {
   width: 635px;
   height: 220px;
   top: 2px;
-
   z-index: 5;
 }
 
@@ -71,6 +94,10 @@ h5 {
   height: 38px;
   margin-top: 32px;
   z-index: 5;
+}
+.curve {
+  position: absolute;
+  bottom: 0;
 }
 /*CARD IMG*/
 .card__img-bg {
@@ -85,9 +112,9 @@ h5 {
   width: 540px;
   top: 113px;
   right: 164px;
-  z-index: 4;
+  /* z-index: 4; */
 }
-.card__img-buttons {
+.slider__buttons {
   position: absolute;
   border-radius: 28px;
   background: var(--lightest-color);
@@ -100,16 +127,23 @@ h5 {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
+}
+.slider__button-prev,
+.slider__button-next {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.is-hidden {
+  display: none;
 }
 
 /*ATTRIBUTION*/
 .attribution {
   font-size: 11px;
-  text-align: center;
-  justify-content: center;
+  align-self: end;
+
   position: relative;
-  top: 355px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
